@@ -1,0 +1,17 @@
+<h2>Register</h2>
+<form (submit)="onSubmit()">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="registrationData.username" name="username" required>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="registrationData.email" name="email" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="registrationData.password" name="password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+<p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
